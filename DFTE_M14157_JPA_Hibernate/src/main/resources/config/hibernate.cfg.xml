@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+"-//Hibernate/Hibernate Configuration DTD//EN"
+"http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+	<session-factory>
+		<!-- db -->
+		<property name="connection.driver_class">com.mysql.cj.jdbc.Driver</property>
+		<!-- property name="connection.driver_class">com.mysql.jdbc.Driver</property -->
+		<property name="connection.url">jdbc:mysql://localhost:3306/m14157</property>
+		<property name="connection.username">root</property>
+		<property name="connection.password">root</property> <!-- properties -->
+		<property name="dialect">org.hibernate.dialect.MySQLDialect</property>
+		<property name="show_sql">true</property>
+		<property name="hbm2ddl.auto">create</property> <!-- mapping files -->
+		<mapping class="com.hcl.loan.Entity.Loan" />
+		<mapping class="com.hcl.loan.Entity.HomeLoan" />
+		<mapping class="com.hcl.loan.Entity.Bank" />
+		<mapping class="com.hcl.loan.Entity.Customer" />
+
+
+	</session-factory>
+</hibernate-configuration>
+
